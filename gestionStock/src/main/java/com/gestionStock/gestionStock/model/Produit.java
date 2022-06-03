@@ -8,7 +8,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
 @Entity
 @Table(name = "produit")
 public class Produit {
@@ -71,6 +70,12 @@ public class Produit {
 	}
 	public void setProduitDateInsertion(Date produitDateInsertion) {
 		this.produitDateInsertion = produitDateInsertion;
+	}
+	@Override
+	public String toString() {
+		return "Produit [produitID=" + produitID + ", produitLibelle=" + produitLibelle + ", produitDescription="
+				+ produitDescription + ", produitQuantite=" + produitQuantite + ", produitDateInsertion="
+				+ produitDateInsertion + "]";
 	}
 	
 

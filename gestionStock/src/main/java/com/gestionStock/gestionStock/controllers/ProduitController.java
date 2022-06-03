@@ -38,7 +38,7 @@ public class ProduitController {
 	
 	@PostMapping(value = "/produit")
 	public void saveProduit(@RequestBody Produit produit) {
-		System.out.println("##### dans saveProduit");
+		System.out.println("##### dans saveProduit == " + produit.toString());
 		produitDao.save(produit);
 	}
 }
