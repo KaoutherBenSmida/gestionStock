@@ -21,6 +21,11 @@ public class ProduitController {
 	private ProduitDao produitDao;
 	
 	
+	public ProduitController() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	public ProduitController(ProduitDao produitDao) {
 		super();
 		this.produitDao = produitDao;
@@ -37,8 +42,9 @@ public class ProduitController {
 	}
 	
 	@PostMapping(value = "/produit")
-	public void saveProduit(@RequestBody Produit produit) {
+	public Produit saveProduit(@RequestBody Produit produit) {
 		System.out.println("##### dans saveProduit == " + produit.toString());
-		produitDao.save(produit);
+		Produit p=produitDao.save(produit);
+		return p;
 	}
 }
