@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 @Entity
 @Table(name = "produit")
-public class Produit {
+public class Produit  extends Entite{
 	
 	
 	
