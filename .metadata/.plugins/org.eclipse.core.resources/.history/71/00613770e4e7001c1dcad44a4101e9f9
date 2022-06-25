@@ -1,0 +1,5 @@
+package com.gestionStock.gestionStock.repositories;
+
+public class Repository {
+
+}

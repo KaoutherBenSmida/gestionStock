@@ -1,0 +1,5 @@
+package com.gestionStock.gestionStock;
+
+public class SpringBootHibernateApplication {
+
+}

@@ -1,0 +1,41 @@
+package com.gestionStock.gestionStock.model;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Facture {
+
+	
+	
+	public Facture() {
+		super();
+	}
+	
+	
+	private Integer factureId;
+	private String factureLibelle;
+	private String factureDescription;
+	
+	
+	public Integer getFactureId() {
+		return factureId;
+	}
+	public void setFactureId(Integer factureId) {
+		this.factureId = factureId;
+	}
+	public String getFactureLibelle() {
+		return factureLibelle;
+	}
+	public void setFactureLibelle(String factureLibelle) {
+		this.factureLibelle = factureLibelle;
+	}
+	public String getFactureDescription() {
+		return factureDescription;
+	}
+	public void setFactureDescription(String factureDescription) {
+		this.factureDescription = factureDescription;
+	}
+	
+	
+	
+}

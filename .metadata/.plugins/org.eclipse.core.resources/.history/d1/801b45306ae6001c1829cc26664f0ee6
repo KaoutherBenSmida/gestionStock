@@ -1,0 +1,19 @@
+package com.gestionStock.gestionStock.test;
+
+import static org.junit.jupiter.api.Assertions.fail;
+
+import org.junit.jupiter.api.Test;
+
+import com.gestionStock.gestionStock.model.Produit;
+
+class ProduitTest {
+
+	@Test
+	void testAddProduit() {
+		
+		//ARRANGE
+		Produit produit = new Produit();
+		fail("Not yet implemented");
+	}
+
+}

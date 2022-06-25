@@ -35,7 +35,7 @@ public class Produit  extends Entite{
 	
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "PRODUITID")
 	public int getProduitID() {
 		return produitID;

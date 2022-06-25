@@ -1,0 +1,62 @@
+package com.gestionStock.gestionStock.controllers;
+
+import java.util.List;
+
+import javax.annotation.PostConstruct;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.gestionStock.gestionStock.model.Produit;
+import com.gestionStock.gestionStock.service.impl.ApplicationManager;
+
+@RestController
+public class ProduitController {
+	
+//	@Autowired
+//	private ApplicationManager applicationManager;
+	private List<Produit> listProduits;
+	
+	
+	public ProduitController() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+//	public ProduitController(ApplicationManager ApplicationManager) {
+//		super();
+//		this.applicationManager=ApplicationManager;
+//	}
+
+	@PostConstruct
+	public void init() {
+		System.out.println("##### dans init ProduitController");
+	}
+
+	@GetMapping(value = "/produit")
+	public List<Produit> getAllProducts(){
+		try {
+			System.out.println("##### dans getAllProducts");
+			ApplicationManager applicationManager = new ApplicationManager();
+			listProduits= applicationManager.getList(Produit.class);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return listProduits;
+	}
+	
+	@PostMapping(value = "/produit")
+	public Produit saveProduit(@RequestBody Produit produit) {
+		System.out.println("##### dans saveProduit == " + produit.toString());
+		try {
+			applicationManager.insert(produit);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return produit;
+	}
+}

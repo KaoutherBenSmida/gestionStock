@@ -1,0 +1,5 @@
+package com.gestionStock.gestionStock.service.impl;
+
+public class AbstractGenericManager {
+
+}

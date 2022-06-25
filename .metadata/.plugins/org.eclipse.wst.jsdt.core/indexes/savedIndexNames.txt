@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+E:\KBS\00 - Kaouther Ben Smida\Workspaces Projets JEE\serviceweb + git\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2663616671.index
+1175580490.index
+2251062075.index
+2639117432.index
+1699654999.index
+397156934.index

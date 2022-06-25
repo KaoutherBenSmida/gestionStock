@@ -1,0 +1,8 @@
+package com.gestionStock.gestionStock.repositories;
+
+
+
+@Repository
+public interface  Repository  extends JpaRepositoryImplementation<Class<T> t, Integer>{
+
+}

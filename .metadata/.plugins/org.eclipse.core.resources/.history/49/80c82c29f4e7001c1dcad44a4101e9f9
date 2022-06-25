@@ -1,0 +1,10 @@
+package com.gestionStock.gestionStock.repositories;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import com.gestionStock.gestionStock.model.Entite;
+@Repository
+public interface RepositoryGlobal extends JpaRepository<Entite,Long> { }

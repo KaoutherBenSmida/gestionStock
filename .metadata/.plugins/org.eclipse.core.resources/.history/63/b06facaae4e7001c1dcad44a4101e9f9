@@ -1,0 +1,7 @@
+package com.gestionStock.gestionStock.repositories;
+
+
+@rep
+public interface  Repository {
+
+}

@@ -1,0 +1,34 @@
+package com.gestionStock.gestionStock.test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
+
+import java.util.Date;
+
+import org.junit.jupiter.api.Test;
+
+import com.gestionStock.gestionStock.controllers.ProduitController;
+import com.gestionStock.gestionStock.model.Produit;
+
+class ProduitTest {
+
+	@Test
+	void testAddProduit() {
+		
+		//ARRANGE
+		ProduitController produitController = new ProduitController();
+		Produit produit = new Produit();
+		produit.setProduitDateInsertion(new Date());
+		produit.setProduitDescription("from test junit");
+		produit.setProduitLibelle("Ordinateur");
+		produit.setProduitQuantite(10);
+		
+		//ACT
+		Produit p= produitController.saveProduit(produit);
+		
+		//ASSERT
+		assertEquals(produit, p);
+		
+	}
+
+}

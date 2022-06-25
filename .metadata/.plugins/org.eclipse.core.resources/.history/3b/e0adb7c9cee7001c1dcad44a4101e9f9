@@ -1,0 +1,5 @@
+package com.gestionStock.gestionStock.dao.impl;
+
+public class EmployeeDAOHibernateImpl {
+
+}

@@ -1,0 +1,5 @@
+package com.gestionStock.gestionStock.qualifiers;
+
+public class Dao {
+
+}
